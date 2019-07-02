@@ -1,0 +1,49 @@
+#mainForm {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: left;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* width: 100px;
+    height: 100px; */
+}
+
+h1 {
+    margin: 0px;
+    text-shadow: 2px 2px 5px lightslategray;
+}
+
+h4 {
+    margin: 5px 0px 10px 0px;
+}
+
+.fillableField {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 5px 0px;
+    border-radius: 5px;
+    border: solid 2px lightgray;
+    font-size: 14px;
+}
+
+.fillableField:focus {
+     outline-width: 0px;
+}
+
+#newToDoItem {
+
+}
+
+#add {
+    color: white;
+    background: #EC65B2;
+    border: solid 2px #EC65B2;
+}
+
+#add:hover {
+    background: #8E3D6C;
+    /* border: solid 2px #EC65B2; */
+}

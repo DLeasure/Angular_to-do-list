@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="mainForm">
+  <h1>
+    To-Do List
+  </h1>
+  <h4>
+    A place to store the things you have to do!
+  </h4>
+  <input id="filter" class="fillableField" placeholder="Filter your list"/>
+  <ol id="toDoListDisplay">
+    <li *ngFor="let ToDoItem of toDoList">
+      {{ ToDoItem.ToDo }}
+      <button class="complete">Complete</button>
+      <button class="delete">X</button>
+    </li>
+  </ol>
+  <form>
+    <input id="newToDoItem" class="fillableField" placeholder="Add your to-do"/>
+    <button id="add" class="fillableField">Add</button>
+  </form>
+</div>
+
+
