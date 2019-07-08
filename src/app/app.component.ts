@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { splitClasses } from '@angular/compiler';
 
 interface TaskInterface {
   ToDo: string;
   Complete: boolean;
 }
+
+let taskInput;
 
 @Component({
   selector: 'ToDoComponent',
@@ -13,6 +16,11 @@ interface TaskInterface {
 
 export class AppComponent {
   title = 'to-do-list';
+
+  // taskInput = new TaskInterface {
+  //   ToDo: null;
+  //   Complete: false;
+  // };
 
   toDoList: TaskInterface[] = [
     {
@@ -32,4 +40,22 @@ export class AppComponent {
       Complete: false
     }
   ]
+
+  completeTask(array, item) {
+    array[item].Complete = true;
+  }
+
+  removeTask(array, item) {
+    array.splice(item, 1);
+  }
+
+  addTask(array) {
+    const newToDo: TaskInterface = {
+      ToDo: taskInput,
+      Complete: false
+    }
+    array.push(newToDo);
+    console.log(newToDo);
+    console.log(array);
+  }
 }

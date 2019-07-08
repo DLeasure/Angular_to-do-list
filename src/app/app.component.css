@@ -30,7 +30,7 @@ h4 {
 }
 
 .fillableField:focus {
-     outline-width: 0px;
+    outline-width: 0px;
 }
 
 #newToDoItem {
@@ -46,4 +46,8 @@ h4 {
 #add:hover {
     background: #8E3D6C;
     /* border: solid 2px #EC65B2; */
+}
+
+.strike {
+    text-decoration: line-through; 
 }

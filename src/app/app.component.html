@@ -9,15 +9,13 @@
   <input id="filter" class="fillableField" placeholder="Filter your list"/>
   <ol id="toDoListDisplay">
     <li *ngFor="let ToDoItem of toDoList">
-      {{ ToDoItem.ToDo }}
-      <button class="complete">Complete</button>
-      <button class="delete">X</button>
+      <span [ngClass]="{strike: ToDoItem.Complete }"> {{ ToDoItem.ToDo }} </span>
+      <button (click)="completeTask(toDoList, toDoList.indexOf(ToDoItem))" *ngIf="!ToDoItem.Complete" class="complete" > Complete </button>
+      <button class="delete" (click)="removeTask(toDoList, toDoList.indexOf(ToDoItem))">X</button>
     </li>
   </ol>
-  <form>
-    <input id="newToDoItem" class="fillableField" placeholder="Add your to-do"/>
-    <button id="add" class="fillableField">Add</button>
-  </form>
+  <input id="newToDoItem" type="text" class="fillableField" placeholder="Add your to-do" [(ngModel)]="taskInput" />
+  <button id="add" type='button' (click)="addTask(toDoList)" class="fillableField">Add</button>
 </div>
 
 
